@@ -3,160 +3,404 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nallabothula Siva Kumar Mahan - DevOps Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Siva Kumar Mahan – DevOps &amp; Cloud Engineer (Azure)</title>
+  <meta name="description" content="Nallabothula Siva Kumar Mahan – DevOps & Cloud Engineer with 5.6+ years on Microsoft Azure: AKS, Terraform/OpenTofu, Bicep, Azure DevOps, GitHub Actions, DevSecOps and observability. AZ-400 certified.">
+  <meta name="author" content="Nallabothula Siva Kumar Mahan">
+  <meta property="og:title" content="Siva Kumar Mahan – DevOps & Cloud Engineer (Azure)">
+  <meta property="og:description" content="5.6+ years building secure, automated Azure platforms: AKS, IaC with Terraform/OpenTofu and Bicep, CI/CD, DevSecOps and observability.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sivakumarmahan.github.io/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f62fe'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3ESM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --surface-2: #eef2f8;
+      --text: #172033;
+      --muted: #5b6577;
+      --border: #dfe5ee;
+      --accent: #0f62fe;
+      --accent-soft: #e5edff;
+      --hero-1: #0b1f44;
+      --hero-2: #0f62fe;
+      --shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 4px 16px rgba(16, 24, 40, .06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --surface: #151b24;
+        --surface-2: #1c2431;
+        --text: #e6eaf2;
+        --muted: #9aa5b8;
+        --border: #263041;
+        --accent: #6ea0ff;
+        --accent-soft: #1b2a47;
+        --hero-1: #08142c;
+        --hero-2: #1a4fbf;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 4px 16px rgba(0, 0, 0, .3);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Roboto', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
+      font-size: 16px;
     }
-    header {
-      background: #2c3e50;
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+    /* Navigation */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--surface) 88%, transparent);
+      backdrop-filter: saturate(160%) blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 16px; }
+    nav .brand { font-weight: 800; color: var(--text); letter-spacing: -.01em; white-space: nowrap; flex: none; }
+    nav ul { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; overflow-x: auto; min-width: 0; scrollbar-width: none; }
+    nav ul a { color: var(--muted); font-weight: 500; font-size: .92rem; white-space: nowrap; }
+    nav ul a:hover { color: var(--accent); text-decoration: none; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--hero-1), var(--hero-2));
       color: #fff;
-      padding: 30px 20px;
-      text-align: center;
+      padding: 64px 0 56px;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
+    .hero .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; opacity: .85; margin: 0 0 10px; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin: 0 0 8px; letter-spacing: -.02em; }
+    .hero .role { font-size: clamp(1.1rem, 2.4vw, 1.35rem); font-weight: 500; margin: 0 0 18px; opacity: .95; }
+    .hero .lead { max-width: 760px; font-size: 1.05rem; opacity: .92; margin: 0 0 26px; }
+    .contact { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
+    .chip-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 14px; border-radius: 999px;
+      background: rgba(255, 255, 255, .12); color: #fff;
+      border: 1px solid rgba(255, 255, 255, .25);
+      font-size: .92rem; font-weight: 500;
     }
-    header h2 {
-      margin: 10px 0 0;
-      font-weight: 400;
-      font-size: 1.2rem;
+    .chip-link:hover { background: rgba(255, 255, 255, .22); text-decoration: none; }
+    .chip-link svg { width: 16px; height: 16px; fill: currentColor; flex: none; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 820px; }
+    .stat { background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .2); border-radius: 12px; padding: 14px 16px; }
+    .stat b { display: block; font-size: 1.5rem; line-height: 1.2; }
+    .stat span { font-size: .85rem; opacity: .9; }
+
+    /* Sections */
+    section { padding: 56px 0 8px; scroll-margin-top: 64px; }
+    section h2 { font-size: 1.6rem; margin: 0 0 6px; letter-spacing: -.01em; }
+    section .sub { color: var(--muted); margin: 0 0 24px; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; box-shadow: var(--shadow); padding: 22px 24px;
     }
-    .container {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 6px;
+
+    /* Skills */
+    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+    .skills h3 { font-size: 1rem; margin: 0 0 12px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+    .tags li {
+      background: var(--accent-soft); color: var(--accent);
+      border-radius: 999px; padding: 4px 12px; font-size: .85rem; font-weight: 500;
     }
-    section {
-      margin-bottom: 25px;
+
+    /* Experience */
+    .job { margin-bottom: 18px; }
+    .job header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 16px; margin-bottom: 4px; }
+    .job h3 { margin: 0; font-size: 1.15rem; }
+    .job .when { color: var(--muted); font-weight: 600; font-size: .92rem; white-space: nowrap; }
+    .job .title { color: var(--muted); margin: 0 0 12px; font-style: italic; }
+    .job ul { margin: 0; padding-left: 20px; }
+    .job li { margin-bottom: 8px; }
+    .job li::marker { color: var(--accent); }
+    .job strong { color: var(--text); }
+
+    /* Achievements */
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+    .achievement b { display: block; font-size: 1.9rem; color: var(--accent); line-height: 1.2; }
+    .achievement p { margin: 6px 0 0; color: var(--muted); }
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+    .project { display: flex; flex-direction: column; }
+    .project h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .project h3 a { color: var(--text); }
+    .project h3 a:hover { color: var(--accent); }
+    .project p { margin: 0 0 14px; color: var(--muted); flex: 1; }
+    .project .tags li { background: var(--surface-2); color: var(--muted); font-size: .78rem; padding: 3px 10px; }
+    .project.featured { border-color: var(--accent); }
+
+    /* Certifications and education */
+    .certs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .cert .code { display: inline-block; font-weight: 800; color: #fff; background: var(--accent); border-radius: 8px; padding: 2px 10px; margin-bottom: 8px; }
+    .cert p { margin: 0; }
+    .cert small { color: var(--muted); }
+
+    footer { margin-top: 56px; padding: 28px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: .9rem; }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+
+    @media (max-width: 720px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      nav ul { gap: 14px; }
+      nav .brand { display: none; }
+      .hero { padding: 44px 0 40px; }
     }
-    section h3 {
-      border-bottom: 2px solid #2c3e50;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-      color: #2c3e50;
-    }
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-    .contact p {
-      margin: 5px 0;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #2c3e50;
-      color: #fff;
-      margin-top: 20px;
-    }
-    .highlight {
-      font-weight: bold;
-      color: #2c3e50;
+    @media print {
+      nav, .contact svg { display: none; }
+      .hero { background: none; color: #000; padding: 0; }
+      .chip-link, .stat { color: #000; border-color: #999; background: none; }
+      .card { box-shadow: none; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Nallabothula Siva Kumar Mahan</h1>
-    <h2>DevOps Engineer</h2>
-    <div class="contact">
-      <p>📞 8639109379 | Andhra Pradesh</p>
-      <p>✉️ mahansivakumar1518@gmail.com</p>
-      <p>🔗 <a href="https://www.linkedin.com/in/siva-kumar-mahan-113441237" style="color:#1abc9c;">LinkedIn Profile</a></p>
+  <nav aria-label="Main">
+    <div class="wrap">
+      <a class="brand" href="#top">Siva Kumar Mahan</a>
+      <ul>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <p class="eyebrow">Hyderabad, India · 5.6+ years · Microsoft Azure</p>
+      <h1>Nallabothula Siva Kumar Mahan</h1>
+      <p class="role">DevOps &amp; Cloud Engineer · AZ-400 Microsoft Certified DevOps Engineer Expert</p>
+      <p class="lead">
+        I architect, automate and operate secure, scalable and highly available cloud-native platforms on Microsoft Azure:
+        Azure Kubernetes Service, Infrastructure as Code with Terraform/OpenTofu and Bicep, and end-to-end CI/CD across
+        Azure DevOps, Jenkins, GitHub Actions and GitLab CI, with DevSecOps and observability built in.
+      </p>
+      <div class="contact" id="contact">
+        <a class="chip-link" href="mailto:mahansivakumar1518@gmail.com">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.2-8 5-8-5V6l8 5 8-5v2.2Z"/></svg>
+          mahansivakumar1518@gmail.com
+        </a>
+        <a class="chip-link" href="tel:+918639109379">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
+          +91 86391 09379
+        </a>
+        <a class="chip-link" href="https://www.linkedin.com/in/siva-kumar-mahan" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2ZM8 19H5V9h3v10ZM6.5 7.7a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5ZM19 19h-3v-4.9c0-1.2 0-2.7-1.6-2.7S12.5 12.7 12.5 14V19h-3V9h2.9v1.4c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.7 2 3.7 4.7V19Z"/></svg>
+          LinkedIn
+        </a>
+        <a class="chip-link" href="https://github.com/SivaKumarMahan" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7c-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .6 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg>
+          GitHub
+        </a>
+      </div>
+      <div class="stats" aria-label="Highlights">
+        <div class="stat"><b>5.6+ yrs</b><span>DevOps &amp; Cloud on Azure</span></div>
+        <div class="stat"><b>99.9%</b><span>Uptime for AKS microservices</span></div>
+        <div class="stat"><b>~50%</b><span>Faster software delivery</span></div>
+        <div class="stat"><b>~25%</b><span>Lower annual cloud spend</span></div>
+      </div>
     </div>
   </header>
 
-  <div class="container">
-    <section>
-      <h3>Profile Summary</h3>
-      <p>
-        DevOps and Cloud Engineer with 3.9 years of experience in managing and automating cloud infrastructure using Azure DevOps, Ansible, Terraform, and Docker. 
-        Skilled in deploying Kubernetes clusters, CI/CD pipelines, and microservices architectures. 
-        Adept at troubleshooting and ensuring high availability across Linux and Windows environments.
-      </p>
+  <main class="wrap">
+
+    <section id="skills" aria-labelledby="skills-h">
+      <h2 id="skills-h">Technical skills</h2>
+      <p class="sub">Microsoft Azure end to end: containers, Infrastructure as Code, CI/CD, security and observability.</p>
+      <div class="skills">
+        <div class="card">
+          <h3>Cloud &amp; Azure services</h3>
+          <ul class="tags">
+            <li>Microsoft Azure</li><li>Virtual Machines</li><li>VM Scale Sets</li><li>Application Gateway + WAF</li>
+            <li>Storage / Blob</li><li>App Service</li><li>Azure Functions</li><li>Service Bus</li><li>Event Grid</li>
+            <li>Azure Policy</li><li>Azure Backup / Recovery Services Vault</li><li>Azure Database for PostgreSQL</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Containers &amp; orchestration</h3>
+          <ul class="tags">
+            <li>Azure Kubernetes Service (AKS)</li><li>Docker</li><li>Helm</li><li>Azure Container Registry</li>
+            <li>Node pools &amp; cluster autoscaler</li><li>Zero-downtime upgrades</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Infrastructure as Code &amp; configuration</h3>
+          <ul class="tags">
+            <li>Terraform</li><li>OpenTofu</li><li>Bicep</li><li>Reusable modules</li><li>Drift detection</li><li>Ansible</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>CI/CD &amp; version control</h3>
+          <ul class="tags">
+            <li>Azure DevOps Pipelines</li><li>Jenkins</li><li>GitHub Actions</li><li>GitLab CI</li>
+            <li>Git</li><li>GitHub</li><li>Azure Repos</li><li>GitLab</li><li>Nexus</li><li>Azure Artifacts</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Security, identity &amp; DevSecOps</h3>
+          <ul class="tags">
+            <li>Azure Key Vault</li><li>Managed Identity</li><li>Microsoft Entra ID</li><li>RBAC &amp; custom roles</li>
+            <li>SonarQube</li><li>Trivy</li><li>Checkov</li><li>Secret scanning</li><li>Policy as Code</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Monitoring &amp; observability</h3>
+          <ul class="tags">
+            <li>Azure Monitor</li><li>Log Analytics &amp; KQL</li><li>Application Insights</li><li>Action Groups</li>
+            <li>Prometheus</li><li>Grafana</li><li>Splunk</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Networking</h3>
+          <ul class="tags">
+            <li>Virtual Network</li><li>NSG</li><li>Private Endpoints</li><li>Private DNS</li><li>VNet Peering</li><li>Load Balancer</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Scripting &amp; operating systems</h3>
+          <ul class="tags">
+            <li>Python</li><li>Shell / Bash</li><li>YAML</li><li>Go (automation)</li><li>Linux</li><li>Windows</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h3>Education</h3>
-      <p><span class="highlight">B-Tech in Electronics and Communication Engineering</span> – Sastra University, Thanjavur, Tamil Nadu (2016–2020)</p>
-      <p>CGPA: 8.0</p>
+    <section id="experience" aria-labelledby="experience-h">
+      <h2 id="experience-h">Experience</h2>
+      <p class="sub">5 years 6 months building and running Azure platforms.</p>
+
+      <article class="card job">
+        <header>
+          <h3>Impressico Business Solutions</h3>
+          <span class="when">Jan 2025 – Present</span>
+        </header>
+        <p class="title">DevOps Engineer · Hyderabad, India</p>
+        <ul>
+          <li><strong>Production Azure infrastructure:</strong> architected and operated VMs, VNets, Storage Accounts, Load Balancers and AKS for business-critical workloads.</li>
+          <li><strong>End-to-end CI/CD</strong> across Azure DevOps, GitHub Actions and GitLab CI, automating build, test, security validation and multi-environment deployment, cutting average release lead time by about 50%.</li>
+          <li><strong>Reusable IaC</strong> with modular Terraform and Bicep templates and dynamic parameterization for repeatable dev, staging and production provisioning.</li>
+          <li><strong>AKS operations:</strong> node-pool management, cluster autoscaling, rolling updates and zero-downtime Kubernetes version upgrades (Bicep with Shell and Python automation), sustaining 99.9% availability.</li>
+          <li><strong>Container delivery</strong> standardized with Docker, ACR and Helm charts; Helm RBAC automation written in Go to standardize Kubernetes access across clusters.</li>
+          <li><strong>Secure networking</strong> with VNets, NSGs, Private Endpoints, Private DNS Zones, VNet Peering and Application Gateway with WAF.</li>
+          <li><strong>Identity and access</strong> hardened with RBAC, Managed Identities, Azure Key Vault and granular custom roles automated with Bicep.</li>
+          <li><strong>Observability:</strong> Azure Monitor, Log Analytics, Application Insights and KQL-based alerting to cut detection time and MTTR; Prometheus and Grafana dashboards for AKS and microservices.</li>
+          <li><strong>DevSecOps:</strong> SonarQube, Trivy, Checkov and quality gates, dependency and secret scanning, and Azure Policy enforcement in delivery pipelines; Git branching strategies, branch policies and protection rules.</li>
+        </ul>
+      </article>
+
+      <article class="card job">
+        <header>
+          <h3>Infosys</h3>
+          <span class="when">Mar 2021 – Dec 2024</span>
+        </header>
+        <p class="title">Technology Analyst · Mysore, India</p>
+        <ul>
+          <li><strong>Cloud provisioning</strong> automated with Terraform and Bicep, contributing to a 25% reduction in cloud costs; managed production Kubernetes workloads on Azure for healthcare microservices.</li>
+          <li><strong>Bicep automation</strong> for VMs, Storage Accounts, Resource Groups and Azure DevOps Service Connections, reducing environment provisioning time by over 70%.</li>
+          <li><strong>VMs and VM Scale Sets</strong> across Linux and Windows fleets with reusable Bicep modules; VMSS autoscale on CPU, memory and custom metrics with rolling upgrade policies.</li>
+          <li><strong>Least-privilege RBAC:</strong> custom role definitions and declarative assignments in Bicep at Resource Group and subscription level, replacing broad Owner and Contributor grants.</li>
+          <li><strong>Backup and recovery</strong> automated with Shell and Python on Azure Backup and Recovery Services Vault for VMs, disks and PostgreSQL, with restore drills and failure notifications.</li>
+          <li><strong>Proactive alerting</strong> with Azure Monitor metric and log alerts, KQL and Application Insights availability tests, routed through Action Groups with severity-based escalation.</li>
+          <li><strong>CI/CD:</strong> Jenkins Declarative Pipelines and Azure DevOps YAML and Classic Release pipelines with approvals, security scanning and rollback.</li>
+          <li><strong>Splunk integration</strong> for centralized logs, dashboards and production alerts; OpenTofu plan/apply workflows with drift detection and remediation.</li>
+          <li><strong>Also:</strong> Ansible playbooks for provisioning and patching, Azure Functions with Service Bus for asynchronous document generation, Nexus and Azure Artifacts, optimized Dockerfiles, and Managed Identities and Service Principals to remove hardcoded credentials.</li>
+        </ul>
+      </article>
     </section>
 
-    <section>
-      <h3>Work Experience</h3>
-      <p><strong>Infosys | Mysore, Karnataka</strong></p>
-      <p><em>Technology Analyst (DevOps Engineer) | Jan 2023 – Present</em></p>
-      <ul>
-        <li>Automated provisioning with Terraform & Ansible, reducing cloud costs by 25%.</li>
-        <li>Implemented Jenkins CI/CD with GitHub integration, improving efficiency by 30%.</li>
-        <li>Containerized applications with Docker & orchestrated using Kubernetes & AKS.</li>
-        <li>Managed Linux/Windows infra, automation with Shell, PowerShell & Python.</li>
-      </ul>
-
-      <p><em>Systems Engineer (SRE) | Mar 2021 – Dec 2022</em></p>
-      <ul>
-        <li>Deployed scalable Kubernetes clusters on Azure.</li>
-        <li>Automated CI/CD pipelines, reducing errors by 40%.</li>
-        <li>Managed Docker Swarm clusters for high availability.</li>
-        <li>Developed YAML IaC configs for repeatable deployments.</li>
-      </ul>
+    <section id="achievements" aria-labelledby="achievements-h">
+      <h2 id="achievements-h">Key achievements</h2>
+      <p class="sub">Outcomes from automation, standardized delivery and observability.</p>
+      <div class="grid-2">
+        <div class="card achievement"><b>~25%</b><p>Lower annual cloud spend through Terraform/Bicep-led provisioning, right-sizing and lifecycle cleanup.</p></div>
+        <div class="card achievement"><b>~50%</b><p>Faster software delivery and about 40% fewer deployment failures with standardized CI/CD, automated tests and security gates.</p></div>
+        <div class="card achievement"><b>99.9%</b><p>Uptime for containerized microservices on Kubernetes through autoscaling, zero-downtime upgrades and observability-driven incident response.</p></div>
+        <div class="card achievement"><b>Shift-left</b><p>SonarQube, Trivy and Checkov quality gates, secret scanning and Bicep-driven least-privilege RBAC, blocking vulnerable code, containers and IaC changes from production.</p></div>
+      </div>
     </section>
 
-    <section>
-      <h3>Technical Skills</h3>
-      <p><strong>Primary:</strong> Azure DevOps</p>
-      <p><strong>Cloud:</strong> Azure</p>
-      <p><strong>CI/CD:</strong> Jenkins, Azure DevOps</p>
-      <p><strong>Containers:</strong> Docker, Kubernetes, Swarm</p>
-      <p><strong>IaC:</strong> Terraform, Ansible</p>
-      <p><strong>Scripting:</strong> Python, Shell, PowerShell</p>
-      <p><strong>Monitoring:</strong> Grafana, Loggly</p>
-      <p><strong>Other:</strong> Git, GitHub, Networking, YAML, SQL</p>
+    <section id="projects" aria-labelledby="projects-h">
+      <h2 id="projects-h">Projects on GitHub</h2>
+      <p class="sub">Hands-on Azure DevOps work. Each repository has a README with diagrams, steps and what was tested.</p>
+      <div class="projects">
+        <article class="card project featured">
+          <h3><a href="https://sivakumarmahan.github.io/interview-questions/" target="_blank" rel="noopener">DevOps Interview Knowledge Base ↗</a></h3>
+          <p>Searchable site with 1,400+ interview questions by topic, Mermaid diagrams, self-quiz answers, study plans, system design and hands-on labs.</p>
+          <ul class="tags"><li>MkDocs</li><li>GitHub Pages</li><li>GitHub Actions</li><li>Kubernetes</li><li>Azure</li></ul>
+        </article>
+        <article class="card project">
+          <h3><a href="https://github.com/SivaKumarMahan/terraform-azure" target="_blank" rel="noopener">terraform-azure ↗</a></h3>
+          <p>Nine Terraform/OpenTofu projects: modules and remote state, AKS + ACR, Key Vault, Application Gateway WAF in front of an autoscaling VM Scale Set, private PostgreSQL with Azure Backup and a custom RBAC role.</p>
+          <ul class="tags"><li>Terraform</li><li>OpenTofu</li><li>AKS</li><li>App Gateway WAF</li><li>PostgreSQL</li></ul>
+        </article>
+        <article class="card project">
+          <h3><a href="https://github.com/SivaKumarMahan/microservices-cicd" target="_blank" rel="noopener">microservices-cicd ↗</a></h3>
+          <p>Multi-stage Azure DevOps pipeline: build, Trivy and Checkov scans, push to ACR, Terraform plan and approved apply, then Helm deploys to AKS for dev and prod.</p>
+          <ul class="tags"><li>Azure DevOps</li><li>Helm</li><li>ACR</li><li>Trivy</li><li>Checkov</li></ul>
+        </article>
+        <article class="card project">
+          <h3><a href="https://github.com/SivaKumarMahan/github-actions" target="_blank" rel="noopener">github-actions ↗</a></h3>
+          <p>GitHub Actions with OIDC to Azure: build, Trivy scan, push to ACR and Helm deploy to AKS with environment approvals; OpenTofu plan comments on pull requests; Bicep validate and deploy.</p>
+          <ul class="tags"><li>GitHub Actions</li><li>OIDC</li><li>AKS</li><li>OpenTofu</li><li>Bicep</li></ul>
+        </article>
+        <article class="card project">
+          <h3><a href="https://github.com/SivaKumarMahan/azure-kubernetes-service" target="_blank" rel="noopener">azure-kubernetes-service ↗</a></h3>
+          <p>Kubernetes building blocks for AKS (probes, security contexts, StatefulSets, NetworkPolicies) and a production-style Helm chart with HPA and PDB, deployed with GitOps.</p>
+          <ul class="tags"><li>AKS</li><li>Kubernetes</li><li>Helm</li><li>Kustomize</li></ul>
+        </article>
+        <article class="card project">
+          <h3><a href="https://github.com/SivaKumarMahan/monitoring" target="_blank" rel="noopener">monitoring ↗</a></h3>
+          <p>Prometheus and Grafana on AKS, a Splunk lab with HEC, alerts and dashboards as code, and SLO-based Prometheus alerting with unit-tested rules.</p>
+          <ul class="tags"><li>Prometheus</li><li>Grafana</li><li>Splunk</li><li>Alertmanager</li></ul>
+        </article>
+        <article class="card project">
+          <h3><a href="https://github.com/SivaKumarMahan/shell-script" target="_blank" rel="noopener">shell-script ↗</a></h3>
+          <p>Azure ops toolkit in Bash: controlled AKS node-pool upgrades, Key Vault secret diff and expiry report, ACR cleanup and Recovery Services backup reports, plus backup with checksum verification.</p>
+          <ul class="tags"><li>Bash</li><li>Azure CLI</li><li>AKS</li><li>Key Vault</li></ul>
+        </article>
+        <article class="card project">
+          <h3><a href="https://github.com/SivaKumarMahan/azure-logicapp-function-integration" target="_blank" rel="noopener">azure-logicapp-function-integration ↗</a></h3>
+          <p>Logic App calling a Python Azure Function that writes to Azure SQL, deployed with Bicep, managed identity and Key Vault, with pytest and a CI/CD workflow.</p>
+          <ul class="tags"><li>Azure Functions</li><li>Logic Apps</li><li>Bicep</li><li>Python</li></ul>
+        </article>
+      </div>
     </section>
 
-    <section>
-      <h3>Certifications</h3>
-      <ul>
-        <li>AZ-900: Microsoft Azure Fundamentals</li>
-        <li>Infosys Certified DevOps Professional</li>
-        <li>Infosys Certified Generative AI</li>
-      </ul>
+    <section id="certifications" aria-labelledby="certifications-h">
+      <h2 id="certifications-h">Certifications &amp; education</h2>
+      <p class="sub">Microsoft certified across DevOps and Azure administration.</p>
+      <div class="certs">
+        <div class="card cert"><span class="code">AZ-400</span><p>Microsoft Certified: DevOps Engineer Expert</p></div>
+        <div class="card cert"><span class="code">AZ-104</span><p>Microsoft Certified: Azure Administrator Associate</p></div>
+        <div class="card cert"><span class="code">AZ-900</span><p>Microsoft Certified: Azure Fundamentals</p></div>
+        <div class="card cert"><span class="code">B.Tech</span><p>Electronics and Communication Engineering</p><small>SASTRA University, Thanjavur · 2016 – 2020 · CGPA 8.0 / 10</small></div>
+      </div>
     </section>
 
-    <section>
-      <h3>Achievements</h3>
-      <ul>
-        <li>Received client appreciation for automating invoice uploads in BEI E-Invoicing Project.</li>
-        <li>Awarded Infosys INSTA Rise for project contributions and upskilling in web technologies.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Personal Skills</h3>
-      <ul>
-        <li>Self-Motivated</li>
-        <li>Adaptability</li>
-        <li>Leadership Potential</li>
-        <li>Quick Learner</li>
-      </ul>
-    </section>
-  </div>
+  </main>
 
   <footer>
-    <p>© 2025 Nallabothula Siva Kumar Mahan | DevOps Engineer</p>
+    <div class="wrap">
+      <span>© <span id="year">2026</span> Nallabothula Siva Kumar Mahan · DevOps &amp; Cloud Engineer</span>
+      <span><a href="mailto:mahansivakumar1518@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/siva-kumar-mahan" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/SivaKumarMahan" target="_blank" rel="noopener">GitHub</a></span>
+    </div>
   </footer>
 
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
